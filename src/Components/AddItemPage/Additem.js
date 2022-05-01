@@ -43,7 +43,7 @@ const Additem = () => {
                    <textarea className='focus:outline-none focus:border-b border-gray-400 w-full p-3 bg-gray-100 rounded' placeholder='Discribtion.....' name="discribtion" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div className='flex justify-end'>
-                    <input className='px-5 py-1 text-xl font-semibold bg-[#f18e7d] rounded text-white ' type="submit" value="Submit" />
+                    <input className='px-5 py-1 text-xl font-semibold bg-green-400 rounded text-white ' type="submit" value="Submit" />
                 </div>
             </form>
             </div>

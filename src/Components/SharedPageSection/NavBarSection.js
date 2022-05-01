@@ -5,12 +5,22 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { MdSearch } from 'react-icons/md';
 import NavBaritemData from './NavBaritemData'
 import { Link } from 'react-router-dom';
+import auth from '../../Firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 
 const NavBarSection = () => {
+  const [user, loading, error] = useAuthState(auth);
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState(false)
   const navBarBtnHandle = () => setOpen(!open)
+
+  const varify = user?.emailVerified || user?.providerId;
+  const logout = () => {
+    signOut(auth);
+  };
+  
   return (
     <div className='shadow-md pb-2'>
 
@@ -30,7 +40,7 @@ const NavBarSection = () => {
             }
           </div>
 
-          <div className={`absolute left-0 h-full bg-white shadow-lg w-64 top-0  flex justify-center ${open ? 'left-0' : 'left-[-100%]'} md:static md:w-full md:shadow-none `}>
+          <div className={`absolute z-50  h-full bg-white shadow-lg w-64 top-0  flex justify-center ${open ? 'left-0' : 'left-[-100%]'} md:static md:w-full md:shadow-none `}>
 
             <ul className='w-full block md:flex justify-end'>
               <p className='absolute top-[-5px] right-[-15px] p-2 text-xl rounded-full bg-gray-400 md:hidden' onClick={() => setOpen(false)}><AiOutlineClose /></p>
@@ -42,7 +52,13 @@ const NavBarSection = () => {
                     <input className='bg-gray-100 px-7 rounded-l-md w-11/12' type="search" name="search" id="" placeholder='Search here....' />
                     <button className='flex  justify-center items-center px-0.5 bg-slate-200 rounded-r-md'><MdSearch />Search</button>
                   </div>
-                  : NavBaritemData.map((item, index) => <li key={index} className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to={item.path}>{item.title}</Link> </li>)
+                  :  <div className='w-full block md:flex justify-end'>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/'>Home</Link> </li>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/add'>Add item</Link> </li>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/manage'>Manage</Link> </li>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/blogs'>Blogs</Link> </li>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'>{varify?<button onClick={logout}>Sign Out</button>:<Link to='/login'>Login</Link>}  </li>
+                  </div>
               }
 
               <button className='hidden md:block ml-3 text-xl' onClick={() => setSearch(!search)}>{search ? <AiOutlineClose /> : <MdSearch />}</button>
