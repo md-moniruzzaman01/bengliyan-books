@@ -1,9 +1,12 @@
 import React from 'react';
+import Carousol from './Carousol';
+
 
 const Home = () => {
     return (
         <div>
-           <h1 className='text-center mt-44 text-3xl'>this is home</h1>
+           <Carousol></Carousol>
+    
         </div>
     );
 };

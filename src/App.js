@@ -10,6 +10,7 @@ import Blogs from './Components/BlogsPage/Blogs';
 import Home from './Components/HomePage/Home';
 import ManagePage from './Components/ManagePage.js/ManagePage';
 import NavBarSection from './Components/SharedPageSection/NavBarSection';
+import NotfoundPage from './Components/SharedPageSection/NotfoundPage';
 import VerifyWarning from './Components/SharedPageSection/VerifyWarning';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/verify" element={<VerifyWarning/>}/>
+      <Route path="*" element={<NotfoundPage/>}/>
 
        
        
