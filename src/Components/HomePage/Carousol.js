@@ -11,7 +11,7 @@ const Carousol = () => {
     const featuredProducts = [
         <CarosolCard heading={'ISBN search features'} text={'start your learing journey by browsing milions of books from our library'} catagory={'SEARCH BOOKS EASILY'}  styles={'bg-green-50'} image={image2}/>,
         <CarosolCard heading={'Read books pdf online'} text={'Let your customers read books online without leaving website'} catagory={'IMBED PDF FEATURE'} styles={'bg-green-50'} image={image1}/>,
-        <CarosolCard heading={'Over 12 million books'} text={'search your books in ISBI number or author name and save your time'} catagory={'Largest Catalog'} styles={'bg-red-100'} image={image3}/>
+        <CarosolCard heading={'Over 12 million books'} text={'search your books in ISBI number or author name and save your time'} catagory={'Largest Catalog'} styles={'bg-red-50'} image={image3}/>
      
     ];
     let count = 0;

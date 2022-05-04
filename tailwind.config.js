@@ -4,6 +4,9 @@ module.exports = {
     extend: {
       colors:{
         basic:'#f18e7d'
+      },
+      fontFamily:{
+          roboto:["Roboto",'sans-serif']
       }
     },
   },
