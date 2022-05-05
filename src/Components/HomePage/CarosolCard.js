@@ -2,7 +2,7 @@ import React from 'react';
 
 const CarosolCard = ({image,styles,catagory,heading,text}) => {
     return (
-        <div className={`h-[600px] grid grid-cols-1 ${styles} md:grid-cols-2`}>
+        <div className={`h-[700px] grid grid-cols-1 ${styles} md:grid-cols-2`}>
         <div className='flex justify-center items-center ml-5 my-5 order-2 md:order-1 '>
         <div className='space-y-5 w-10/12'>
             <div className='flex '><p className='bg-gray-100 px-4 font-semibold text-gray-500 py-2 rounded text-md '>{catagory}</p></div>

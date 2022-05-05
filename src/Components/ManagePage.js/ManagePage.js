@@ -1,9 +1,10 @@
 import React from 'react';
+import ManageCard from './ManageCard';
 
 const ManagePage = () => {
     return (
         <div>
-             <h1 className='text-center mt-44 text-3xl'>this is manage</h1>
+        <ManageCard></ManageCard>
         </div>
     );
 };

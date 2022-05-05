@@ -1,7 +1,8 @@
 import React from 'react';
 
-const BooksCard = ({book}) => {
-    const {title,image,price,supplierName,category,discribtion}=book
+const BooksCard = ({book,updatebtnHandle}) => {
+    const {_id,title,image,price,supplierName,category,discribtion}=book
+   
     return (
         <div className=' flex justify-center'>
            
@@ -16,7 +17,7 @@ const BooksCard = ({book}) => {
                     <p>{discribtion.slice(0,50)}....</p>
                    <div className='flex justify-between'>
                    <h2 className='text-basic text-2xl font-semibold '>${price}</h2>
-                    <button className='px-7 py-1.5 text-xl bg-green-600 text-gray-200 font-semibold rounded-3xl'>Updata</button>
+                    <button onClick={()=>updatebtnHandle(_id)} className='px-7 py-1.5 text-xl bg-green-600 text-gray-200 font-semibold rounded-3xl'>Updata</button>
                    </div>
 
                 </div>

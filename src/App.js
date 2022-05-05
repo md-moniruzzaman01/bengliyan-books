@@ -8,6 +8,7 @@ import Register from './Components/AuthonticationPage/Register';
 import RequireAuth from './Components/AuthonticationPage/RequireAuth';
 import Blogs from './Components/BlogsPage/Blogs';
 import Home from './Components/HomePage/Home';
+import Inventorydetails from './Components/Inventory/Inventorydetails';
 import ManagePage from './Components/ManagePage.js/ManagePage';
 import NavBarSection from './Components/SharedPageSection/NavBarSection';
 import NotfoundPage from './Components/SharedPageSection/NotfoundPage';
@@ -27,6 +28,7 @@ function App() {
       </RequireAuth>
       }/>
       <Route path="/manage" element={<ManagePage/>}/>
+      <Route path="/inventory/:id" element={<Inventorydetails/>}/>
       <Route path="/blogs" element={<Blogs/>}/>
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/register" element={<Register/>}/>
