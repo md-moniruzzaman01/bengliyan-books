@@ -7,9 +7,6 @@ const Inventorydetails = () => {
     const [details, setDetails]= useState({})
     const [ quantity , setQuantity]= useState(0)
    
-    
-   
-   
   useEffect(()=>{
     const url =`http://localhost:5000/inventory/${id}`
    fetch(url)
@@ -17,17 +14,20 @@ const Inventorydetails = () => {
    .then(data=>{
     setQuantity(data.quantity);
        setDetails(data)
+    
    })
   },[quantity])
   
       
-    // console.log(details);
+ 
    
 
     const deleverdbtnHandle =()=>{
        
         
-       const newquantity= parseInt(details.quantity + 1)
+       const newquantity= parseInt(details.quantity) + 1
+       const stingNewquantity = newquantity + ''
+       console.log(stingNewquantity );
         const url =`http://localhost:5000/delivered/${id}`
        fetch(url,{
       
@@ -36,7 +36,7 @@ const Inventorydetails = () => {
                 'Content-Type': 'application/json',
                
             },
-            body: JSON.stringify({quantity: newquantity})
+            body: JSON.stringify({quantity: stingNewquantity})
        
        })
        .then(res=> res.json())
@@ -48,7 +48,7 @@ const Inventorydetails = () => {
         
         
     }
- 
+//  console.log(details.quantity);
     return (
         <div className='text-center'>
             <h1>he:{id}</h1>

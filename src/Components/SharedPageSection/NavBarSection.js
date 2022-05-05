@@ -57,6 +57,7 @@ const NavBarSection = () => {
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/add'>Add item</Link> </li>
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/manage'>Manage</Link> </li>
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/blogs'>Blogs</Link> </li>
+                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/myitems'>My items</Link> </li>
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'>{varify?<button onClick={logout}>Sign Out</button>:<Link to='/login'>Login</Link>}  </li>
                   </div>
               }
