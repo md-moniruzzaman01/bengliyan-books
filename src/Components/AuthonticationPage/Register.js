@@ -6,9 +6,10 @@ import '../Style/registerpage.css'
 import GoogleSigninbtn from './GoogleSigninbtn';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init'
+import useToken from '../../hooks/usueToken';
 const Register = () => {
     const navigate = useNavigate();
-    
+    const [token] = useToken(user)
 
     const [
         createUserWithEmailAndPassword,
@@ -31,7 +32,10 @@ const Register = () => {
        
         await updateProfile({ displayName });
         if(varify){
-            navigate('/home')
+            if(token){
+
+                navigate('/home')
+            }
         }else{
             navigate('/verify')
         }

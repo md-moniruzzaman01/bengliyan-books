@@ -6,7 +6,7 @@ const ManagePage = () => {
     const navigate = useNavigate()
     const [allitems ,setallitems]=useState([])
     useEffect(()=>{
-        axios.get('http://localhost:5000/all')
+        axios.get('https://guarded-dusk-72997.herokuapp.com/all')
         .then(Response=>{
             const items =(Response.data);
             setallitems(items)
@@ -17,7 +17,7 @@ const ManagePage = () => {
     }
     const deleteHandle =(id)=>{
             console.log(id);
-            fetch(`http://localhost:5000/remove/${id}`,{
+            fetch(`https://guarded-dusk-72997.herokuapp.com/remove/${id}`,{
                 method: 'DELETE'
             })
             .then(res=> res.json())

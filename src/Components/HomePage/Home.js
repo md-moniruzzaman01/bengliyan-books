@@ -10,7 +10,7 @@ const Home = () => {
     const navigate = useNavigate()
     
       useEffect(()=>{
-        fetch('http://localhost:5000/homebooks')
+        fetch('https://guarded-dusk-72997.herokuapp.com/homebooks')
         .then(res=> res.json())
         .then(data=>{
             gethomebooks(data)

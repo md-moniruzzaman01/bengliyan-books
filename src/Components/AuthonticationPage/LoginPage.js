@@ -8,6 +8,9 @@ import GoogleSigninbtn from './GoogleSigninbtn';
 import auth from '../../Firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
+import useToken from '../../hooks/usueToken';
+import LoadingScreen from '../SharedPageSection/LoadingScreen';
 
 
 const LoginPage = () => {
@@ -20,10 +23,11 @@ const LoginPage = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [token] = useToken(user)
 
 
     
-  
+     
 
 
 
@@ -31,6 +35,10 @@ const LoginPage = () => {
       const varify = user?.emailVerified || user?.providerId;
       let location = useLocation();
       let from = location.state?.from?.pathname || "/";
+
+      if(loading){
+        return <LoadingScreen></LoadingScreen>
+    }
      
     const loginhandle =async(e)=>{
        
@@ -38,12 +46,13 @@ const LoginPage = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
        await signInWithEmailAndPassword(email, password)
+      
        
     }
     if(varify){
         navigate('/verify')
     }
-    if(user){
+    if(token){
         navigate(from, { replace: true })
      }
 

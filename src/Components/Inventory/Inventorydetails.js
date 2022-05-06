@@ -8,7 +8,7 @@ const Inventorydetails = () => {
     const [ quantity , setQuantity]= useState(0)
    
   useEffect(()=>{
-    const url =`http://localhost:5000/inventory/${id}`
+    const url =`https://guarded-dusk-72997.herokuapp.com/inventory/${id}`
    fetch(url)
    .then(res=>res.json())
    .then(data=>{
@@ -28,7 +28,7 @@ const Inventorydetails = () => {
        const newquantity= parseInt(details.quantity) + 1
        const stingNewquantity = newquantity + ''
        console.log(stingNewquantity );
-        const url =`http://localhost:5000/delivered/${id}`
+        const url =`https://guarded-dusk-72997.herokuapp.com/delivered/${id}`
        fetch(url,{
       
             method: 'PUT',

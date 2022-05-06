@@ -21,7 +21,7 @@ const Additem = () => {
             discribtion: e.target.discribtion.value,
 
         }
-        axios.post('http://localhost:5000/add',item)
+        axios.post('https://guarded-dusk-72997.herokuapp.com/add',item)
         .then(Response =>{
             const {data}= Response;
             if(data.insertedId){
