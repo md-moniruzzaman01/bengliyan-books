@@ -34,23 +34,10 @@ const TrandingSection = () => {
 
     return (
         
-        <div className='container mx-auto'>
-            <h1 className='text-2xl font-semibold text-gray-800  mt-11 mb-7'>What's in trand</h1>
+        <div className='container mx-auto mb-24  max-w-7xl'>
+            <h1 className='text-2xl text-gray-800 md:text-3xl mt-20 mb-7' > What's in trand</h1>
                <Swiper
-          // effect={"coverflow"}
-          // grabCursor={true}
-          // centeredSlides={true}
-          // slidesPerView={"auto"}
-          // coverflowEffect={{
-          //   rotate: 50,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: true,
-          // }}
-          // pagination={true}
-          // modules={[EffectCoverflow, Pagination]}
-          // className="mySwiper"
+     
           slidesPerView={"auto"}
           spaceBetween={30}
           pagination={{

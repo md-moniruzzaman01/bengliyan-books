@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import LoadingScreen from '../SharedPageSection/LoadingScreen';
 import BooksCard from './BooksCard';
 import Carousol from './Carousol';
+import Testimonials from './Testimonials';
 import TrandingSection from './TrandingSection';
 
 
@@ -43,6 +44,7 @@ const Home = () => {
                 }
                </div>
             </div>
+            <Testimonials></Testimonials>
             
         </div>
     );
