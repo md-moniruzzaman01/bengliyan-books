@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CarosolCard = ({image,styles,catagory,heading,text}) => {
+const CarosolCard = ({image,styles,catagory,heading,text,imagefix}) => {
     return (
         <div className={`h-[700px] grid grid-cols-1 ${styles} md:grid-cols-2`}>
         <div className='flex justify-center items-center ml-5 my-5 order-2 md:order-1 '>
@@ -11,8 +11,8 @@ const CarosolCard = ({image,styles,catagory,heading,text}) => {
               <button className='bg-basic text-white px-5 py-1 text-xl rounded'>read now</button>
           </div>
         </div>
-          <div className='flex justify-center items-center order-1 md:order-2'>
-              <img className='max-h-[80vh]' src={image} alt="" />
+          <div  className='flex justify-center items-center  order-1 md:order-2'>
+              <img className='h-auto lg:h-[600px]' src={image} alt="" />
           </div>
  </div>
     );

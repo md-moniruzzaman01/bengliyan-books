@@ -22,7 +22,7 @@ const NavBarSection = () => {
   };
   
   return (
-    <div className='shadow-md pb-2'>
+    <div className='shadow-md pb-2 navbar-fix'>
 
 
 <div className='container  mx-auto'>

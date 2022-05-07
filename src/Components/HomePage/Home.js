@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import LoadingScreen from '../SharedPageSection/LoadingScreen';
 import BooksCard from './BooksCard';
 import Carousol from './Carousol';
+import TrandingSection from './TrandingSection';
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
     return (
         <div className='mb-72'>
            <Carousol></Carousol>
+           <TrandingSection></TrandingSection>
             
             <div>
                 <div className='pt-11 space-y-3 '>

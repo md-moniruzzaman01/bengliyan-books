@@ -9,9 +9,9 @@ import image4 from '../../Images/girl-reading-books-online.png'
 
 const Carousol = () => {
     const featuredProducts = [
-        <CarosolCard heading={'ISBN search features'} text={'start your learing journey by browsing milions of books from our library'} catagory={'SEARCH BOOKS EASILY'}  styles={'bg-green-50'} image={image2}/>,
-        <CarosolCard heading={'Read books pdf online'} text={'Let your customers read books online without leaving website'} catagory={'IMBED PDF FEATURE'} styles={'bg-green-50'} image={image1}/>,
-        <CarosolCard heading={'Over 12 million books'} text={'search your books in ISBI number or author name and save your time'} catagory={'Largest Catalog'} styles={'bg-red-50'} image={image3}/>
+        <CarosolCard heading={'ISBN search features'} text={'start your learing journey by browsing milions of books from our library'} catagory={'SEARCH BOOKS EASILY'}  styles={'bg-green-50' } image={image2}/>,
+        <CarosolCard heading={'Read books pdf online'} text={'Let your customers read books online without leaving website'} catagory={'IMBED PDF FEATURE'} styles={'bg-green-50' } image={image1}/>,
+        <CarosolCard heading={'Over 12 million books'} text={'search your books in ISBI number or author name and save your time'} catagory={'Largest Catalog'} styles={'bg-red-50'}  image={image3}/>
      
     ];
     let count = 0;
@@ -60,7 +60,7 @@ const Carousol = () => {
     return (
         <div>
             <div ref={slideRef} className="w-full select-none  relative">
-            <div className="aspect-w-16 aspect-h-9">
+            <div className="aspect-w-16 aspect-h-9 ">
                 {/* <img src={featuredProducts[currentIndex]} alt="" /> */}
                 {featuredProducts[currentIndex]}
             </div>
