@@ -54,10 +54,17 @@ const NavBarSection = () => {
                   </div>
                   :  <div className='w-full block md:flex justify-end'>
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/'>Home</Link> </li>
-                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/add'>Add item</Link> </li>
-                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/manage'>Manage</Link> </li>
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/blogs'>Blogs</Link> </li>
-                    <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/myitems'>My items</Link> </li>
+                    {
+                      varify? 
+                      <div className='block md:flex'>
+                        <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/add'>Add item</Link> </li>
+                      <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/manage'>Manage</Link> </li>
+                      <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'> <Link to='/myitems'>My items</Link> </li>
+                      </div>
+                      :
+                      <p></p>
+                    }
                     <li  className='mx-auto w-3/6 py-1  flex items-center justify-center md:w-24  md:mx-1'>{varify?<button onClick={logout}>Sign Out</button>:<Link to='/login'>Login</Link>}  </li>
                   </div>
               }

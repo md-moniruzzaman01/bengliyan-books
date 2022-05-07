@@ -11,7 +11,7 @@ const ManagePage = () => {
             const items =(Response.data);
             setallitems(items)
         })
-    },[])
+    },[allitems])
     const additembtnHandle = ()=>{
         navigate('/add')
     }
@@ -22,10 +22,14 @@ const ManagePage = () => {
             })
             .then(res=> res.json())
             .then(data=>{
-                if(data.deletedCount>0){
-                    const rest = allitems.filter(item => item._id !==id)
-                    setallitems(rest)
+                const confarm = window.confirm('Delete this item')
+                if (confarm) {
+                    if(data.deletedCount>0){
+                        const rest = allitems.filter(item => item._id !==id)
+                        setallitems(rest)
+                    }
                 }
+                
             })
             
     }
@@ -33,7 +37,7 @@ const ManagePage = () => {
         <div>
            <div className='flex justify-center mt-5'> <button onClick={additembtnHandle} className='rounded w-6/12 max-w-[500px] min-w-[100px]  py-2 font-semibold text-gray-100 bg-green-400'>Add item</button></div>
             {
-                allitems.map(item => <ManageCard item={item} deleteHandle={deleteHandle}></ManageCard>)
+                allitems.map(item => <ManageCard item={item} key={item._id} deleteHandle={deleteHandle}></ManageCard>)
             }
         
         </div>

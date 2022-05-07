@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LoadingScreen from '../SharedPageSection/LoadingScreen';
 import BooksCard from './BooksCard';
 import Carousol from './Carousol';
 
@@ -10,6 +11,7 @@ const Home = () => {
     const navigate = useNavigate()
     
       useEffect(()=>{
+          console.log(homebooks.length);
         fetch('https://guarded-dusk-72997.herokuapp.com/homebooks')
         .then(res=> res.json())
         .then(data=>{
@@ -19,7 +21,7 @@ const Home = () => {
        
       },[])
       
-     
+    
         const updatebtnHandle =(_id)=>{
             navigate(`/inventory/${_id}`);
         }

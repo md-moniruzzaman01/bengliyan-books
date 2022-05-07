@@ -29,7 +29,10 @@ function App() {
       </RequireAuth>
       }/>
       <Route path="/manage" element={<ManagePage/>}/>
-      <Route path="/inventory/:id" element={<Inventorydetails/>}/>
+      <Route path="/inventory/:id" element={
+        <RequireAuth>
+      <Inventorydetails/>
+      </RequireAuth>}/>
       <Route path="/blogs" element={<Blogs/>}/>
       <Route path="/myitems" element={<Myitems/>}/>
       <Route path="/login" element={<LoginPage/>}/>

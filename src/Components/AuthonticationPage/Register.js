@@ -9,15 +9,15 @@ import auth from '../../Firebase.init'
 import useToken from '../../hooks/usueToken';
 const Register = () => {
     const navigate = useNavigate();
-    const [token] = useToken(user)
-
+    
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
-      const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification: true});
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token] = useToken(user)
 
       const varify = user?.emailVerified || user?.providerId;
 
