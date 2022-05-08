@@ -1,7 +1,13 @@
 import React from 'react';
 
 const BooksCard = ({book,updatebtnHandle}) => {
-    const {_id,title,image,price,supplierName,category,discribtion,quantity}=book
+    const {_id,title,image,price,supplierName,category,discribtion,quantity}=book;
+    let quantities
+    if (quantity === '0') {
+       quantities = "Out of stack"
+    }else{
+       quantities = quantity
+    }
    
     return (
         <div className=' flex justify-center'>
@@ -17,7 +23,7 @@ const BooksCard = ({book,updatebtnHandle}) => {
                     <p className='text-gray-800'>{discribtion.slice(0,50)}....</p>
                    <div className='flex justify-between'>
                    <h2 className='text-basic text-2xl font-semibold '>${price}</h2>
-                   <p className='text-gray-800 font-semibold'>Quantity : {quantity}</p>
+                   <p className='text-gray-800 font-semibold'>Quantity : {quantities}</p>
                    </div>
                    <div className='flex justify-end'> <button onClick={()=>updatebtnHandle(_id)} className='px-7 py-1.5 text-xl bg-green-600 text-gray-200 font-semibold rounded-3xl'>Updata</button></div>
 

@@ -103,11 +103,16 @@ const Inventorydetails = () => {
          
         })
         setQuantity(restackquantity)
-        alert('quantity added')
+        toast('Quantity added')
         
          inputquntity.current.value = ''
     }
-     
+    let quantities
+     if (quantity === '0') {
+        quantities = "Out of stack"
+     }else{
+        quantities = quantity
+     }
 
     
     return (
@@ -122,7 +127,7 @@ const Inventorydetails = () => {
             <div className='space-y-5'>
             <h1 className='text-2xl font-semibold text-gray-900'>{details?.title}</h1>
             <p >supplier name : {details?.supplierName}</p>
-            <p >Availability :<span className='bg-gray-300 px-3 py-2 rounded-full mx-2 font-semibold'> {quantity} </span> <span className=' font-semibold'>in stack</span></p>
+            <p >Availability :<span className='bg-gray-300 px-3 py-2 rounded-full mx-2 font-semibold'> {quantities} </span> <span className=' font-semibold'>in stack</span></p>
             <p>Sold :  {details?.sell}</p>
             <p className='text-2xl font-semibold  '>Price : <span className='text-emerald-600'>${details?.price}</span> </p>
             <div className=' w-10/12'>
