@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 const Additem = () => {
     const [user, loading, error] = useAuthState(auth);
     const additembtnHandle=(e)=>{
-        // e.preventDefault();
+        e.preventDefault();
         const item = {
             title :e.target.name.value,
             email:user.email,
