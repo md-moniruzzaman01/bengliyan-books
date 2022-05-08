@@ -10,12 +10,13 @@ const VerifyWarning = () => {
         auth
       );
     const navigate = useNavigate()
-    const varify = user?.emailVerified || user?.providerId;
+    const varify = user?.emailVerified || user?.providerData[0].providerId === 'google.com';
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
    
     if(varify){
         navigate('/home')
+        console.log(user);
      }
 
    const sendmailhandle =async()=>{

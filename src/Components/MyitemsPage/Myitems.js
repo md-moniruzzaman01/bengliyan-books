@@ -57,13 +57,15 @@ const Myitems = () => {
         })
         
 }
-
+    if (!user) {
+        navigate('/login')
+    }
     if(loading){
         return <LoadingScreen></LoadingScreen>
     }
     return (
         <div>
-         <h1 className='text-2xl font-semibold text-center mt-5'> my total items: {myitems.length}</h1>
+         <h1 className='text-2xl font-semibold text-center mt-5'> my total items: {myitems?.length}</h1>
          <div className='container flex justify-end'>
              {
                 user.displayName? <p>name {user?.displayName} </p> : <p>Email {user?.email} </p>

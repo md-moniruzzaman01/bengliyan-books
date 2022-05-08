@@ -1,6 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import Additem from './Components/AddItemPage/Additem';
 import LoginPage from './Components/AuthonticationPage/LoginPage';
@@ -11,6 +12,7 @@ import Home from './Components/HomePage/Home';
 import Inventorydetails from './Components/Inventory/Inventorydetails';
 import ManagePage from './Components/ManagePage.js/ManagePage';
 import Myitems from './Components/MyitemsPage/Myitems';
+import Footer from './Components/SharedPageSection/Footer';
 import NavBarSection from './Components/SharedPageSection/NavBarSection';
 import NotfoundPage from './Components/SharedPageSection/NotfoundPage';
 import VerifyWarning from './Components/SharedPageSection/VerifyWarning';
@@ -45,7 +47,7 @@ function App() {
       
     </Routes>
     <ToastContainer></ToastContainer>
-   
+   <Footer></Footer>
     </div>
   );
 }

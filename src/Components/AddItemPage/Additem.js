@@ -4,6 +4,7 @@ import { GiSnail } from 'react-icons/gi';
 import axios from 'axios';
 import auth from '../../Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 
 
 const Additem = () => {
@@ -25,7 +26,7 @@ const Additem = () => {
         .then(Response =>{
             const {data}= Response;
             if(data.insertedId){
-                alert('product uploaded')
+                toast('product added')
             }
             console.log(data);
         })

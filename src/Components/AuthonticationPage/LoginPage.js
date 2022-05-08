@@ -61,7 +61,7 @@ const LoginPage = () => {
     return (
         <div className='container mx-auto'>
             <div className='login-section flex justify-center items-center pt-5 mx-auto relative' >
-                <div className=' w-11/12  h-[70vh] bg-green-200 lg:w-3/12'>
+                <div className=' w-11/12  h-[530px] bg-green-200 lg:w-3/12'>
                     <h1 className='text-center text-3xl mt-11 mb-9 text-gray-700 font-semibold'>Welcome back</h1>
                     <p className=' ml-9 font-semibold text-md text-gray-800'>Please login to your account</p>
                     <p className='ml-9 text-red-500'>{error?.message}</p>
@@ -97,10 +97,10 @@ const LoginPage = () => {
 
                 </div>
 
-                <div className='absolute bottom-[75px] left-96'>
+                <div className='absolute bottom-[75px] left-96 hidden lg:block'>
                     <img className='w-full h-60 ' src={logincaracter} alt="" />
                 </div>
-                <div className='absolute bottom-[75px]  right-[18%] w-3/12'>
+                <div className='absolute bottom-[68px]  right-[16%] w-3/12 hidden lg:block'>
                     <img className='w-full ' src={plantlogin} alt="" />
                 </div>
                 

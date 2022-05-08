@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import logo from '../../Images/bookhouse-logo.svg'
+import logo from '../../Images/bookhouse-logo-svg.svg'
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { MdSearch } from 'react-icons/md';
-import NavBaritemData from './NavBaritemData'
+
 import { Link } from 'react-router-dom';
 import auth from '../../Firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
