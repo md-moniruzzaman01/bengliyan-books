@@ -68,7 +68,7 @@ const Myitems = () => {
          <h1 className='text-2xl font-semibold text-center mt-5'> my total items: {myitems?.length}</h1>
          <div className='container flex justify-end'>
              {
-                user.displayName? <p>name {user?.displayName} </p> : <p>Email {user?.email} </p>
+                user.displayName? <p><span className='font-semibold'>name:</span> {user?.displayName} </p> : <p><span className='font-semibold'></span>Email: {user?.email} </p>
          }
         
          </div>
