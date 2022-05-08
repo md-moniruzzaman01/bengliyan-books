@@ -1,6 +1,12 @@
 # Bengliyan
- [Bemgliyan](https://assignment-11-b48ac.web.app/)
+ [Bengliyan](https://assignment-11-b48ac.web.app/)
+
+ ![preview site](https://i.ibb.co/Wxq4Rny/Capture.png)
+
+ bengliyan is warehouse of book store website . This website can updata product quantity (reduce , add) , upload product data with image  as well as track user email with jsonwebtoken . dynamic home page with tracking sell recode with tranding section.
  
+       https://assignment-11-b48ac.web.app/
+
  ### feature of bengliyan website :
  - reduce quantity by deliverd button click
  - upload quantity by single click
